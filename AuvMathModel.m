@@ -30,8 +30,7 @@ Ysum = YHS+auv.Yvv*v*abs(v)+auv.Yrr*r*abs(r)+auv.m*auv.yg*r*r+(auv.Yur-auv.m)*u*
 Zsum = ZHS+auv.Zww*abs(w)*w*+auv.Zqq*abs(q)*q+(auv.Zuq+auv.m)*u*q+(auv.Zvp-auv.m)*v*p+(auv.Zrp-auv.m*auv.xg)*r*p+auv.Zuw*u*w+auv.m*auv.zg*(p*p+q*q)-auv.m*auv.yg*r*q+auv.Zuudelta*u*u*elevator;
 Ksum = KHS+auv.Kpp*p*abs(p)-(auv.Izz-auv.Iyy)*q*r-auv.m*auv.zg*(w*p-u*r);%+auv.m*(-v*p)u*q
 Msum = MHS+MDisturb+auv.Mww*abs(w)*w+auv.Mqq*abs(q)*q+(auv.Muq-auv.m*auv.xg)*u*q+(auv.Mvp+auv.m*auv.xg)*v*p+(auv.Mrp-(auv.Ixx-auv.Izz))*r*p+auv.m*auv.zg*(v*r-w*q)+auv.Muw*u*w+auv.Muudelta*u*u*elevator;
-Nsum = NHS+NDisturb+auv.Nvv*v*abs(v)+auv.Nrr*r*abs(r)+(auv.Nur-auv.m*auv.xg)*u*r+(auv.Nwp+auv.m*auv.xg)*w*p+(auv.Npq-(auv.Iyy-auv.Ixx))*p*q-auv.m*auv.yg*(v*r-w*q)+auv.Nuv*u*v+auv.Nu*u+auv.Nuudelta*u*u*rudder;
-
+Nsum = NHS+NDisturb+auv.Nvv*v*abs(v)+auv.Nrr*r*abs(r)+(auv.Nur-auv.m*auv.xg)*u*r+(auv.Nwp+auv.m*auv.xg)*w*p+(auv.Npq-(auv.Iyy-auv.Ixx))*p*q-auv.m*auv.yg*(v*r-w*q)+auv.Nuv*u*v+auv.Nuudelta*u*u*rudder;
 
 
 Out = auv.Mni*[Xsum;Ysum;Zsum;Ksum;Msum;Nsum];
