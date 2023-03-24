@@ -6,7 +6,7 @@ It can run on Matlab 2020b and newer versions. Matlab must be installed Simulink
 
 AUV model using Remus100 in 《Verification of a six-degree of freedom simulation model for the REMUS autonomous underwater vehicle》.
 
-The path following in the platform is 3D line-of-sight guidance law and PID autopilot. 《Principles of Guidance-Based Path Following
+The path following method in the platform is 3D line-of-sight guidance law and PID autopilot. 《Principles of Guidance-Based Path Following
 in 2D and 3D》.
 
 Running video: https://www.bilibili.com/video/BV13o4y1B76J/
