@@ -1,0 +1,350 @@
+#VRML V2.0 utf8
+
+DEF NED Transform {
+  translation 3 0 1
+  scale 2 2 2
+  rotation 0 1 0 3.141593
+  children DEF RotYaw Transform {
+    rotation 0 -1 0 0.2
+    children [
+      DEF RotPitch Transform {
+        rotation 0 0 -1 0
+        children [
+          DEF RotRoll Transform {
+            scale 1.5 1.5 1.5
+            rotation -1 0 0 0
+            children [
+              DEF Hull Transform {
+                scale 1 0.2 0.2
+                children Shape {
+                  appearance Appearance {
+                    material DEF Sub_Gray Material {
+                      diffuseColor 1 0.4 0.4
+                    }
+                  }
+                  geometry Sphere {
+                  }
+                }
+              }
+              DEF Fairwater Transform {
+                translation -0.4 0.2 0
+                scale 1.4 1 0.4
+                children [
+                  Shape {
+                    appearance Appearance {
+                      material USE Sub_Gray
+                    }
+                    geometry Cylinder {
+                      radius 0.1
+                      height 0.2
+                    }
+                  }
+                  Transform {
+                    translation 0.02 0.03 0
+                    scale 0.075 0.1 0.1
+                    children Shape {
+                      appearance Appearance {
+                        material USE Sub_Gray
+                      }
+                      geometry Cylinder {
+                      }
+                    }
+                  }
+                ]
+              }
+              DEF FairwaterPlane Transform {
+                translation -0.4 0.25 0
+                rotation 1 0 0 1.57
+                children DEF Plane Transform {
+                  scale 1 2.2 0.1
+                  rotation 0 1 0 0
+                  children Shape {
+                    appearance Appearance {
+                      material DEF Sub_Gray_0001 Material {
+                        diffuseColor 1 1 0.2
+                      }
+                    }
+                    geometry Cylinder {
+                      radius 0.1
+                      height 0.1
+                    }
+                  }
+                }
+              }
+              DEF Rudder Transform {
+                translation 0.8 0 0
+                scale 1.3 0.7 0.2
+                rotation 0 1 0 0.2
+                children [
+                  Shape {
+                    appearance Appearance {
+                      material USE Sub_Gray_0001
+                    }
+                    geometry Cylinder {
+                      radius 0.07
+                      height 0.5
+                    }
+                  }
+                  Transform {
+                    translation 0 0.25 0
+                    children [
+                      Shape {
+                        appearance Appearance {
+                          material USE Sub_Gray_0001
+                        }
+                        geometry Sphere {
+                          radius 0.07
+                        }
+                      }
+                      Transform {
+                        translation 0 -0.5 0
+                        children Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0001
+                          }
+                          geometry Sphere {
+                            radius 0.07
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              DEF ElevatorRot Transform {
+                rotation 1 0 0 1.5708
+                children DEF Elevator Transform {
+                  translation 0.8 0 0
+                  scale 1.3 0.7 0.2
+                  rotation 0 1 0 0
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material USE Sub_Gray_0001
+                      }
+                      geometry Cylinder {
+                        radius 0.07
+                        height 0.5
+                      }
+                    }
+                    Transform {
+                      translation 0 0.25 0
+                      children [
+                        Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0001
+                          }
+                          geometry Sphere {
+                            radius 0.07
+                          }
+                        }
+                        Transform {
+                          translation 0 -0.5 0
+                          children Shape {
+                            appearance Appearance {
+                              material USE Sub_Gray_0001
+                            }
+                            geometry Sphere {
+                              radius 0.07
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+              DEF PropellerRot Transform {
+                translation 1 0 0
+                rotation 0 0 1 4.712389
+                children DEF Rotatation Transform {
+                  rotation 0 -1 0 0.4
+                  children DEF Propeller Transform {
+                    scale 0.2 0.2 0.2
+                    children [
+                      Shape {
+                        appearance Appearance {
+                          material DEF Sub_Gray_0002 Material {
+                            diffuseColor 0 0 0
+                          }
+                        }
+                        geometry Cone {
+                          height 0.2
+                          bottomRadius 0.1
+                        }
+                      }
+                      Transform {
+                        scaleOrientation 0 1 0 2.4
+                        scale 1 0.03 0.1
+                        children Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0002
+                          }
+                          geometry Sphere {
+                            radius 0.6
+                          }
+                        }
+                      }
+                      Transform {
+                        scaleOrientation 0 1 0 1.2
+                        scale 1 0.03 0.1
+                        children Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0002
+                          }
+                          geometry Sphere {
+                            radius 0.6
+                          }
+                        }
+                      }
+                      Transform {
+                        scaleOrientation 0 1 0 1.8
+                        scale 1 0.03 0.1
+                        children Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0002
+                          }
+                          geometry Sphere {
+                            radius 0.6
+                          }
+                        }
+                      }
+                      Transform {
+                        scale 1 0.03 0.1
+                        children Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0002
+                          }
+                          geometry Sphere {
+                            radius 0.6
+                          }
+                        }
+                      }
+                      Transform {
+                        scaleOrientation 0 1 0 0.6
+                        scale 1 0.03 0.1
+                        children Shape {
+                          appearance Appearance {
+                            material USE Sub_Gray_0002
+                          }
+                          geometry Sphere {
+                            radius 0.6
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+          DEF observe_stern Viewpoint {
+            description "Stern"
+            position 2.2 0.5 0
+            orientation 0 1 0 1.5708
+            fieldOfView 1.5708
+          }
+        ]
+      }
+      DEF observe_sternLeft Viewpoint {
+        description "SternLeft"
+        position 3.5 0.8 3
+        orientation 0 1 0 0.7853982
+        fieldOfView 0.7854
+      }
+      DEF observe_portsside Viewpoint {
+        description "Portside"
+        position 0 0.5 3.5
+        orientation 0 1 0 0
+        fieldOfView 0.7854
+      }
+      DEF observe_starboard Viewpoint {
+        description "Starboard"
+        position 0 0.5 -3.5
+        orientation 0 1 0 3.141593
+        fieldOfView 0.7854
+      }
+      DEF observe_SternRight Viewpoint {
+        description "SternRight"
+        position 3.5 0.8 -3
+        orientation 0 1 0 2.356194
+        fieldOfView 0.7854
+      }
+    ]
+  }
+}
+DirectionalLight {
+  intensity 0.5
+  direction -0.408215 -0.81653 0.408215
+}
+DirectionalLight {
+  intensity 0.5
+  direction 0.408215 -0.81653 0.408215
+}
+Background {
+  skyColor [
+    0 0 0,
+    0.2 0.2 0.9,
+    0.4 0.8 0.9 
+  ]
+  skyAngle [1.39626, 1.51844]
+  groundColor 0 0.6 1
+  groundAngle [1.3, 1.5708]
+}
+Background {
+  skyColor [
+    0.76238 0.8 0.1427,
+    0.277798 0.219779 0.7,
+    0.222549 0.390234 0.7,
+    0.60094 0.662637 0.69 
+  ]
+  skyAngle [0.1, 1.2, 1.57]
+  groundColor [
+    0 0.8 0,
+    0.174249 0.82 0.187362,
+    0.467223 0.82 0.445801,
+    0.621997 0.67 0.600279 
+  ]
+  groundAngle [0.9, 1.5, 1.57]
+}
+DEF drawing_overview Viewpoint {
+  description "overview"
+  position -10 8 50
+  fieldOfView 0.7854
+}
+DEF sea_level Transform {
+  translation -4.3547 0.5 -5.4813
+  scale 200 200 1
+  rotation 1 0 0 1.5708
+  children Shape {
+    appearance Appearance {
+      textureTransform TextureTransform {
+        scale 10 10
+      }
+      texture ImageTexture {
+        url "water.jpg" 
+      }
+      material Material {
+        transparency 0.3
+        diffuseColor 0.2 0.6 1
+      }
+    }
+    geometry IndexedFaceSet {
+      solid FALSE
+      coordIndex [
+        0, 1, 2, 3, -1 
+      ]
+      colorIndex [
+        2, 1, 0, 2, -1 
+      ]
+      coord Coordinate {
+        point [
+          -10 10 0,
+          -10 -10 0,
+          10 -10 0,
+          10 10 0 
+        ]
+      }
+    }
+  }
+}
